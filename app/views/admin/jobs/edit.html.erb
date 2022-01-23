@@ -1,0 +1,9 @@
+<h1>職缺編輯</h1>
+
+<form action="/admin/jobs/<%= @job.id %>" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" value="<%= @job.name %>">
+  <input type="text" name="desc" value="<%= @job.desc %>">
+  <input name="_method" type="hidden" value="patch" />
+  <button type="submit" name="button">存檔</button>
+</form>

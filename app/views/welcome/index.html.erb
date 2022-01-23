@@ -1,0 +1,35 @@
+<h1>Yourator 後端賽亞人作業</h1>
+
+<hr>
+<a href="/companies">更多公司</a>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+  </tr>
+
+  <% @companies.each do |company| %>
+    <tr>
+      <td><%= company.name %></td>
+      <td><%= company.desc %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+<a href="/jobs">更多職缺</a>
+<table>
+  <tr>
+    <th>company</th>
+    <th>Name</th>
+    <th>Desc</th>
+  </tr>
+
+  <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.company.name %></td>
+      <td><%= job.name %></td>
+      <td><%= job.desc %></td>
+    </tr>
+  <% end %>
+</table>

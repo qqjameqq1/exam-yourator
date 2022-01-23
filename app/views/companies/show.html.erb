@@ -1,0 +1,24 @@
+<p><%= @company.name %></p>
+<p><%= @company.desc %></p>
+
+<hr>
+
+<h1>職缺列表</h1>
+<table>
+  <tr>
+    <th>company</th>
+    <th>Name</th>
+    <th>Desc</th>
+    <th>more</th>
+  </tr>
+
+  <% @company.jobs.each do |job| %>
+    <tr>
+      <td><%= job.name %></td>
+      <td><%= job.desc %></td>
+      <td>
+        <a href="/jobs/<%= job.id %>">more</a>
+      </td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,20 @@
+<h1>職缺列表</h1>
+<table>
+  <tr>
+    <th>company</th>
+    <th>Name</th>
+    <th>Desc</th>
+    <th>more</th>
+  </tr>
+
+  <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.company.name %></td>
+      <td><%= job.name %></td>
+      <td><%= job.desc %></td>
+      <td>
+        <a href="/jobs/<%= job.id %>">more</a>
+      </td>
+    </tr>
+  <% end %>
+</table>
